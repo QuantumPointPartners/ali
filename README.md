@@ -51,6 +51,12 @@ type day_state = {
 | Soft No    | -15 .. -6   | 15%                 | Polite refusal, maintaining equilibrium |
 | Clear No   | ≤ -16       | 10%                 | Firm rejection, unambiguous and final   |
 
+As you can see the hypothetical interaction model between Alex and Ali Michael is formalized through a mutable `day_state` record whose score field represents cumulative conversational momentum and whose notes field preserves an ordered event log. Each function invocation mutates this shared state by incrementally shifting score according to event polarity (positive reinforcement, hesitation, or rejection), while appending structured trace data to notes. 
+
+Mapping the evolving score against the defined quantization table yields a probabilistic forecast: ≥ +15 indicates a 25% likelihood of a Strong Yes (explicit agreement), `+5..+14` maps to a `30%` likelihood of a Soft Yes (tentative acceptance), `-5..+4` aligns with a `20%` Undecided state (non-committal equilibrium), -15..-6 corresponds to a 15% Soft No (polite deferral), and `≤ -16` converges on a 10% Clear No (terminal rejection). Thus, the stochastic process governing Alex’s chances with Ali Michael is reducible to deterministic state transitions combined with probabilistic outcome interpretation.
+
+If you `tail -f` the logs, you'd see successive function calls mutating `day_state.score` that are trending essentially downward, each event log in `notes`, so of course you can come to your conclusion with just a sliver of a quant idea we had. 
+
 ## Authors
 
 Michael Mendy (c) 2025. 
