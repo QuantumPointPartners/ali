@@ -43,12 +43,13 @@ type day_state = {
 
 ## Quant Table 
 
-|                           Firm                           |                           Strengths                           |             Best Fit Use Case             |
-|:--------------------------------------------------------:|:-------------------------------------------------------------:|:-----------------------------------------:|
-| WilmerHale                                               | Broad coverage across fund types, regulatory + tax depth      | Complex multi-strategy platforms          |
-| Gibson Dunn                                              | Global scale, secondaries, fund finance, enforcement          | Institutional, large-scale setups         |
-| Nixon Peabody                                            | Middle-market focus, cost-effective, emerging sponsor support | Startups / thematic funds                 |
-| Existing Picks (Kirkland, Cooley, Goodwin, Jones Walker) | Strong track records; boutique vs megafirm balance            | Tailor to specific strategy + culture fit |
+|   Outcome  | Score Range | Approx. Probability |              Interpretation             |
+|:----------:|:-----------:|:-------------------:|:---------------------------------------:|
+| Strong Yes | ≥ +15       | 25%                 | Clear, specific agreement to meet       |
+| Soft Yes   | +5 .. +14   | 30%                 | Tentative but positive acceptance       |
+| Undecided  | -5 .. +4    | 20%                 | Deferral; no closure, but no rejection  |
+| Soft No    | -15 .. -6   | 15%                 | Polite refusal, maintaining equilibrium |
+| Clear No   | ≤ -16       | 10%                 | Firm rejection, unambiguous and final   |
 
 ## Authors
 
